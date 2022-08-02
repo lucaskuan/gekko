@@ -4,7 +4,10 @@ services:
     build: ./
     volumes:
       - ./volumes/gekko/history:/usr/src/app/history
+      - ./config:/usr/src/app/config
       - ./config.js:/usr/src/app/config.js
+      - ./strategies:/usr/src/app/strategies
+      - ./logs:/usr/src/app/logs
     links:
       - redis
 #      - postgresql
